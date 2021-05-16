@@ -1,3 +1,3 @@
-# scaler2
+# Scaler2
 
-[Performances](https://withviz.github.io/scaler2/performances/)
+Unpacking [Performances](https://withviz.github.io/scaler2/performances/)
