@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Scaler 2 Performances</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <!-- datatables-->
+  <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+  <script type="text/javascript" language="javascript"
+    src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <h1>Scaler 2 Performances</h1>
+
+    <p class="lead">Trying to learn some music theory...</p>
+    
+    <p></p>
+    <table id="performances" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>Performance</th>
+          <th>Translation</th>
+          <th>BPM</th>
+          <th>Style</th>
+          <th>Style translation</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Performance</th>
+          <th>Translation</th>
+          <th>BPM</th>
+          <th>Style</th>
+          <th>Style translation</th>
+          <th>Notes</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  </div>
+
+  <div class="container-fluid">
+  <p>Sources: 
+
+    <ul>
+      <li><a href="https://music.stackexchange.com/questions/4525/list-of-average-genre-tempo-bpm-levels">StackExchange</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Tempo">Wikipedia</a></li>
+      <li><a href="https://translate.google.com/?sl=it&tl=en">Google Translate</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Glossary_of_music_terminology#E">Wikipedia</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Ossia">Wikipedia</a></li>
+    </ul>
+
+  </p>
+
+  &copy <a href="https://withviz.github.io">withviz.github.io</a>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('#performances').DataTable({
+
+        "ajax": "jsonprop.json",
+        "columns": [
+          { "data": "Performance" },
+          { "data": "Translation" },
+          { "data": "BPM" },
+          { "data": "Style"},
+          { "data": "Style_translation" },
+          { "data": "Notes" }
+ 
+        ]
+      });
+    });
+  </script>
+  <!-- Optional JavaScript -->
+  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
